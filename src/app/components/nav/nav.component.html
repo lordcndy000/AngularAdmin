@@ -1,0 +1,195 @@
+<nav class='sidebar_nav'>
+	<div class='background-filter'>
+
+		<div class='app-title'>
+			<img src='assets/img/angular2-logo.png' height='42' width='42'>
+			<h4>{{app_name}}</h4>
+		</div>
+
+		<div class='app-user'>
+			<div class='user-wrapper' id='toggleClick'>
+				<img src='assets/img/avatar.jpg' height='42' width='42' class='user-img'>
+				<span>{{app_user}}</span>
+				<span class='glyphicon glyphicon-menu-down rotateIcon'></span>
+			</div>
+
+			<div class='user-submenu' id='app-usersubmenu'>
+				<ul class='list-unstyled'>
+					<li class='submenu-item'>			
+						<span class='nav-icon'>MP</span>
+						<span>{{mp}}</span>
+						<span></span>
+					</li>
+					<li class='submenu-item'>			
+						<span class='nav-icon'>EP</span>
+						<span>{{ep}}</span>
+						<span></span>
+					</li>
+					<li class='submenu-item'>			
+						<span class='nav-icon'>S</span>
+						<span>{{settings}}</span>
+						<span></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class='app-menu'>
+			<ul class='list-unstyled'>
+				<!-- Dashboard -->
+				<li class='mainmenu-item' routerLink='dashboard' routerLinkActive="active">
+					<svg fill="#fff" height="28" viewBox="0 0 28 28" width="28" xmlns="http://www.w3.org/2000/svg">
+				   	<path d="M0 0h24v24H0z" fill="none"/>
+				   	<path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+					</svg>
+					<span>{{dashboard}}</span>
+					<span class='glyphicon glyphicon-menu-down invisible'></span>
+				</li>
+				<!-- Components -->
+				<li class='mainmenu-item' id='toggleClickMenu'>
+					<img src='assets/img/components.svg' height='28' width='28'>
+					<span>{{comps}}</span>
+					<span class='glyphicon glyphicon-menu-down rotateComponentIcon'></span>
+				</li>
+
+				<div class='user-submenu' id='app-menusubmenu'>
+					<ul class='list-unstyled'>
+						<li class='submenu-item' routerLink='buttons' routerLinkActive="active">			
+							<span class='nav-icon'>B</span>	
+							<span>{{buttons}}</span>
+							<span></span>
+						</li>
+						<li class='submenu-item' routerLink='gridsystem' routerLinkActive="active">
+							<span class='nav-icon'>GS</span>
+							<span>{{gridsystem}}</span>
+							<span></span>
+						</li>
+						<li class='submenu-item' routerLink='panels' routerLinkActive="active">			
+							<span class='nav-icon'>P</span>
+							<span>{{panels}}</span>
+							<span></span>
+						</li>
+						<li class='submenu-item' routerLink='notifications' routerLinkActive="active">
+							<span class='nav-icon'>N</span>
+							<span>{{notifications}}</span>
+							<span></span>
+						</li>
+						<li class='submenu-item' routerLink='icons' routerLinkActive="active">			
+							<span class='nav-icon'>I</span>
+							<span>{{icons}}</span>
+							<span></span>
+						</li>
+						<li class='submenu-item' routerLink='typography' routerLinkActive="active">		
+							<span class='nav-icon'>T</span>
+							<span>{{typo}}</span>
+							<span></span>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Forms -->
+				<li class='mainmenu-item' id='toggleClickForm'>
+					<img src='assets/img/forms.svg' height='28' width='28'>
+					<span>{{frms}}</span>
+					<span class='glyphicon glyphicon-menu-down rotateFormIcon'></span>
+				</li>
+
+				<div class='user-submenu' id='app-formsubmenu'>
+					<ul class='list-unstyled'>
+						<li class='submenu-item' routerLink='regularforms' routerLinkActive="active">		
+							<span class='nav-icon'>RF</span>
+							<span>{{rf}}</span>
+							<span></span>
+						</li>
+						<li class='submenu-item' routerLink='validationforms' routerLinkActive="active">
+							<span class='nav-icon'>VM</span>
+							<span>{{vm}}</span>
+							<span></span>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Tables -->
+				<li class='mainmenu-item' id='toggleClickTables'>
+					<img src='assets/img/table.svg' height='28' width='28'>
+					<span>{{table}}</span>
+					<span class='glyphicon glyphicon-menu-down rotateTableIcon'></span>
+				</li>
+
+				<div class='user-submenu' id='app-tablesubmenu'>
+					<ul class='list-unstyled'>
+						<li class='submenu-item' routerLink='regulartables' routerLinkActive="active">
+							<span class='nav-icon'>RT</span>
+							<span>{{rt}}</span>
+							<span></span>
+						</li>
+						<li class='submenu-item' routerLink='extendedtables' routerLinkActive="active">
+							<span class='nav-icon'>ET</span>
+							<span>{{et}}</span>
+							<span></span>
+						</li>
+						<li class='submenu-item' routerLink='datatables' routerLinkActive="active">
+							<span class='nav-icon'>DT</span>
+							<span>{{dt}}</span>
+							<span></span>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Maps -->
+				<li class='mainmenu-item' id='toggleClickMaps'>
+					<img src='assets/img/map.svg' height='28' width='28'>
+					<span>{{map}}</span>
+					<span class='glyphicon glyphicon-menu-down rotateMapIcon'></span>
+				</li>
+
+				<div class='user-submenu' id='app-mapsubmenu'>
+					<ul class='list-unstyled'>
+						<li class='submenu-item' routerLink='googlemaps' routerLinkActive="active">		
+							<span class='nav-icon'>GM</span>
+							<span>{{gm}}</span>
+							<span></span>
+						</li>
+						<li class='submenu-item' routerLink='fullscreenmap' routerLinkActive="active">	
+							<span class='nav-icon'>FSM</span>
+							<span>{{fsm}}</span>
+							<span></span>
+						</li>
+						<li class='submenu-item' routerLink='vectormap' routerLinkActive="active">			
+							<span class='nav-icon'>VM</span>
+							<span>{{vm}}</span>
+							<span></span>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Charts -->
+				<li class='mainmenu-item' routerLink='charts' routerLinkActive="active">
+					<svg fill="#fff" height="28" viewBox="0 0 28 28" width="28" xmlns="http://www.w3.org/2000/svg">
+					   <path d="M22 6.92l-1.41-1.41-2.85 3.21C15.68 6.4 12.83 5 9.61 5 6.72 5 4.07 6.16 2 8l1.42 1.42C5.12 7.93 7.27 7 9.61 7c2.74 0 5.09 1.26 6.77 3.24l-2.88 3.24-4-4L2 16.99l1.5 1.5 6-6.01 4 4 4.05-4.55c.75 1.35 1.25 2.9 1.44 4.55H21c-.22-2.3-.95-4.39-2.04-6.14L22 6.92z"/>
+					   <path d="M0 0h24v24H0z" fill="none"/>
+					</svg>
+					<span>{{charts}}</span>
+					<span class='glyphicon glyphicon-menu-down invisible'></span>
+				</li>
+
+				<!-- Calendar -->
+				<li class='mainmenu-item' routerLink='calendar' routerLinkActive="active">
+					<svg fill="#fff" height="28" viewBox="0 0 28 28" width="28" xmlns="http://www.w3.org/2000/svg">
+					   <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+					   <path d="M0 0h24v24H0z" fill="none"/>
+					</svg>
+					<span>{{calendar}}</span>
+					<span class='glyphicon glyphicon-menu-down invisible'></span>
+				</li>
+
+
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class='main-content'>
+	<router-outlet></router-outlet>
+
+
+</div>

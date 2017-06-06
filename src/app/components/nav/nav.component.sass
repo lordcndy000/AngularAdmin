@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400')
+
+$red_hex: #F44336
+$red_rgba: rgba(244, 0, 0, 0.7)
+$red_hover: rgba(255, 143, 134, 0.4)
+$fontcolor: #fff
+$fontsize: 1.0625em
+$main-background: #eee
+$activecolor: #3C3B3B
+
+.sidebar_nav
+	font-family: 'Roboto', sans-serif
+	position: fixed
+	overflow: auto
+	width: 260px
+	height: 100%
+	-webkit-box-shadow: 4px 0px 9px 0px rgba(0,0,0,0.2)
+	-moz-box-shadow: 4px 0px 9px 0px rgba(0,0,0,0.2)
+	box-shadow: 4px 0px 9px 0px rgba(0,0,0,0.2)
+	background:
+		image: url('img/mountain.jpg')
+		position: center
+		size: cover
+		repeat: no-repeat
+	.background-filter
+		padding: 15px
+		overflow: auto
+		height: 100%
+		background: $red_rgba
+		.app-title
+			display: flex
+			justify-content: center
+			align-items: center
+			padding: 5px 0 15px 0
+			border-bottom: 1px solid rgba(255,255,255,0.3)
+			color: $fontcolor
+			text-transform: uppercase
+		.app-user
+			padding: 15px 5px
+			border-bottom: 1px solid rgba(255,255,255,0.3)
+			color: $fontcolor
+			font:
+				weight: 300
+				size: $fontsize
+			.user-img
+				border-radius: 50%
+				-webkit-box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.5)
+				-moz-box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.5)
+				box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.5)
+			.user-wrapper
+				display: flex
+				justify-content: space-around
+				align-items: center
+				cursor: pointer
+				.glyphicon
+					font-size: 0.75em
+
+		.app-menu
+			padding: 15px 5px
+			color: $fontcolor
+			font:
+				weigth: 300
+				size: $fontsize
+			.glyphs
+				font-size: 1.75em
+
+
+
+.mainmenu-item
+	border-radius: 3px
+	margin: 10px 0
+	padding: 10px 0
+	display: flex
+	justify-content: space-around
+	align-items: center
+	cursor: pointer
+	text-decoration: none
+	outline: none
+	span, a, a:hover, a:visited, a:active
+		// color: $fontcolor
+		font-weight: 300
+		text
+			decoration: none
+			align: left
+		width: 50%
+	transition: all 0.3s ease
+	&:hover
+		background: $red_hover
+	span:last-child
+		text-align: right
+		width: auto
+	.glyphicon
+		font-size: 0.75em
+
+
+.user-submenu
+	display: none
+
+.submenu-item
+	margin: 10px 0
+	border-radius: 3px
+	padding: 10px 0
+	display: flex
+	justify-content: space-around
+	align-items: center
+	cursor: pointer
+	outline: none
+	white-space: nowrap
+	transition: all 0.3s ease
+	&:hover
+		background: $red_hover
+	span, a
+		// color: $fontcolor
+		font-weight: 300
+		width: 33%
+.nav-icon
+	text-align: center
+
+.active
+	background: white
+	color: $activecolor
+	-webkit-box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.33)
+	-moz-box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.33)
+	box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.33)
+	svg
+		fill: $activecolor
+	pointer-events: none
+	animation: activeAnimation 0.3s ease forwards
+
+@keyframes activeAnimation
+	0%
+		opacity: 0
+		transform: scale(0, 0)
+	25%
+		opacity: 0.3
+		transform: scale(0.3, 0.3)
+	50%
+		opacity: 0.5
+		transform: scale(0.5, 0.5)
+	75%
+		opacity: 0.75
+		transform: scale(0.75, 0.75)
+	90%
+		opacity: 0.9
+		transform: scale(1.05, 1.05)
+	100%
+		opacity: 1
+		transform: scale(1, 1)
+
+.toggleIcon, .toggleIcon2, .toggleIcon3, .toggleIcon4, .toggleIcon5
+	animation: rotateback 0.3s ease-in-out forwards
+
+.rotate, .rotate2, .rotate3, .rotate4, .rotate5
+	animation: rotate 0.3s ease-in-out forwards
+
+
+@keyframes rotateback
+	0%
+		transform: rotate(-180deg)
+	100%
+		transform: rotate(0deg)
+
+@keyframes rotate
+	0%
+		transform: rotate(0deg)
+	// 50%
+	// 	transform: rotate(180deg)
+	100%
+		transform: rotate(180deg)
+
+
+///////////////
+.main-content
+	background: $main-background
+	margin-left: 260px
